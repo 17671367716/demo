@@ -1,10 +1,19 @@
 #   creation time:2021/7/20 10:59
-#   theme:
+#   theme: 迭代
 
-lst1 = [0,0]
-lst2 = []
-for item in range(0,20):
-    lst1[item][0] = item
-    lst1[item][1] = item
+import urllib.request
+import requests
 
-print(lst2)
+#   get请求
+response = urllib.request.urlopen("http://www.baidu.com")
+# print(response.read().decode('utf-8'))
+
+#   post请求
+
+response = requests.get(url='http://www.baidu.com')
+print(response.content.decode("utf-8"))
+
+# requests.post()
+
+with open('a.html','w+') as f:
+    f.write(f.read())
